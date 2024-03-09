@@ -32,8 +32,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        return null; // Replace null with the variable you used to store the result
-    }
+        if (a == null || b == null) {
+            return null;
+        }
+          else 
+        return a + b; // Replace null with the variable you used to store the result
+        }
 
     /**
      * Question 2
@@ -44,7 +48,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+        return a - b; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -56,7 +60,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+        return a * b; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -69,7 +73,11 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Decimal division(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+        if( b == 0){
+            return 0;
+        } 
+         else 
+        return a / b; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -83,7 +91,13 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+        if (num % 2 == 0) {
+    return true;
+        } else {
+    return false; 
+    }
+}
+         // Replace null with the variable you used to store the result
     }
 
     /**
@@ -94,6 +108,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
+        if(num < 0) {
+        return true;
+     } else {
         return null; // Replace null with the variable you used to store the result
     }
 
@@ -105,8 +122,10 @@ public with sharing class VariablesDataTypesOperators {
      * @param str2 The second string.
      * @return The concatenated string.
      */
+    String str1 = "Hello"
+    String str2 = "Augusta"
     public static String concatenateStrings(String str1, String str2) {
-        return null; // Replace null with the variable you used to store the result
+        return "HelloAugusta"; // Replace null with the variable you used to store the result
     }
 
 	/**
@@ -120,8 +139,11 @@ public with sharing class VariablesDataTypesOperators {
 	 * @param endingPunctuation The punctuation to end the sentence, e.g., '.', '!', '?'
 	 * @return The complete sentence as a single String.
 	 */
+    String noun = "Bag"
+    String verb = "peeling"
+    String endingPunctuation = "."
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
+        return "The Bag is peeling."; // Replace null with the variable you used to store the result
 	}
 
     /**
@@ -133,10 +155,14 @@ public with sharing class VariablesDataTypesOperators {
      * @param dt The date to check.
      * @return True if the date is in the past, False otherwise.
      */
+    Date Currentdate = Date.today();
     public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+       if( dt < Currentdate ) {
+       return true;
+    } else { 
+       return false;// Replace null with the variable you used to store the result
     }
-
+    }
     /**
      * Question 10
      * Checks if a date is today or in the future.
@@ -146,8 +172,9 @@ public with sharing class VariablesDataTypesOperators {
      * @param dt The date to check.
      * @return True if the date is today or in the future, False otherwise.
      */
+    Date Currentdate = Date.today()
     public static Boolean isDateTodayOrFuture(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+        return dt >= Cureentdate; // Replace null with the variable you used to store the result
     }
 
     /**
